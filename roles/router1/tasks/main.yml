@@ -1,0 +1,6 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for router1
+
+- name: configure interfaces
+  ansible.builtin.include_tasks: interfaces.yml

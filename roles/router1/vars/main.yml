@@ -1,0 +1,6 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for router1
+
+description: " from my var file in my role"
+ip_address: "10.10.10.10"

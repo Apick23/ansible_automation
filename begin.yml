@@ -1,0 +1,13 @@
+---
+
+- hosts: routers
+  gather_facts: no
+
+  tasks:
+
+    - name: configure router1
+      ansible.builtin.include_role:
+        name: router1
+
+  
+  

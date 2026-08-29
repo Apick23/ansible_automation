@@ -1,0 +1,22 @@
+---
+
+- name: Create loopback interfaces
+  cisco.ios.ios_l3_interfaces:
+    config:
+      - name: "{{ item.name }}"
+        ipv4:
+          - address: "{{ item.ip }}"
+    state: merged
+  loop: "{{ loopbacks }}"
+
+
+- name: Sending show commands
+  cisco.ios.ios_command:
+    commands:
+      - show ip int b
+  register: output
+- debug: var=output.stdout_lines
+      
+# - name: print a friendly message
+#   debug:
+#     msg: "python in my opinion is still better than ansible but this must be learning here is a host from my inventory name {{ inventory_hostname }}"
