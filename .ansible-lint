@@ -1,0 +1,9 @@
+skip_list:
+  - yaml[line-length]
+  - meta-no-info
+
+exclude_paths:
+  - .github/
+
+warn_list:
+  - experimental
